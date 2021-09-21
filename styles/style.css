@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+/* Custom Variables */
+:root {
+  --pry-color: #0000b2;
+  --text-color: #00f;
+  --light-text-color: rgba(0, 0, 255, 0.7);
+  --lighter-text-color: rgba(0, 0, 255, 0.35);
+  --very-light-text-color: rgba(0, 0, 255, 0.08);
+  --dark-text-color: rgb(0, 0, 87);
+  --font-size: 1rem;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Utilities */
+.container {
+  width: 92%;
+  max-width: 74.75rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: var(--pry-color);
+  color: #fff;
+  border: 1px solid var(--pry-color);
+  border-radius: 0.8rem;
+  transition: all 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+  background: var(--light-text-color);
+  border-color: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Body */
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  font-size: var(--font-size);
+}
+
+header {
+  margin-top: 3rem;
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.5625rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dark-text-color);
+}
+
+/* Nav links styles */
+nav a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.6rem;
+  transition: all 0.3s ease-in;
+}
+
+nav a:not(:last-child) {
+  margin-right: 3rem;
+}
+
+nav a:hover {
+  color: var(--text-color);
+}
+
+/* Landing page styles  */
+main.landing-page {
+  width: 100%;
+  margin-top: 5.2rem;
+}
+
+.landing-page-text {
+  width: 55%;
+}
+
+.landing-page-title {
+  font-size: 4.5rem;
+}
+
+.landing-page-title span {
+  color: var(--light-text-color);
+}
+
+a.create-account {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1.1rem 1.2rem;
+  margin-top: 3.2rem;
+}
+
+.landing-page-image {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing-page-image svg {
+  width: 84%;
+  color: var(--lighter-text-color);
+  transform: rotate(-10deg);
+}
+
+/* Paste link input section */
+.paste-link-section {
+  margin-top: 7.5rem;
+}
+
+.paste-link-section label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.paste-link-group {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+  height: 2.5rem;
+}
+
+.paste-link-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 84%;
+  height: 100%;
+  font-size: 1.1rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--pry-color);
+  border-radius: 0.8rem 0 0 0.8rem;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+button.generate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16%;
+  height: 100%;
+  font-size: 1.2rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.landing-page-footer {
+  margin: 5rem 0 2rem 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* LOGIN AND SIGN UP PAGE STYLES */
+main.login-page,
+main.signup-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+
+.heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.input-section {
+  margin: 4rem 0 0 0;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.input-group:not(:last-of-type) {
+  margin-bottom: 1.8rem;
+}
+
+.input-group label {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  background: var(--very-light-text-color);
+  letter-spacing: 3px;
+  transition: all 0.4s ease;
+}
+
+.input-group input:hover,
+.input-group input:focus {
+  outline: none;
+  border-color: var(--pry-color);
+  background: #fff;
+}
+
+.input-sub-group:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.login-btn,
+.signup-btn {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 0 0.7rem;
+  margin: 1.8rem 0 0 0;
+}
+
+.no-account,
+.have-account {
+  margin-top: 3rem;
+}
+
+.no-account a,
+.have-account a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.home {
+  display: inline-block;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 55rem) {
+  /* Logo styles */
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Nav links styles */
+  nav a {
+    font-size: 1rem;
+  }
+
+  nav a:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+
+  /* Landing page styles  */
+  main.landing-page {
+    display: block;
+    margin-top: 5rem;
+  }
+
+  .landing-page-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .landing-page-title {
+    font-size: 3.5rem;
+  }
+
+  a.create-account {
+    font-size: 1.1rem;
+    margin-top: 2.6rem;
+  }
+
+  .landing-page-image {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+  }
+
+  .landing-page-image svg {
+    width: 100%;
+    color: var(--very-light-text-color);
+  }
+
+  /* Paste link input section */
+  .paste-link-section {
+    margin-top: 5rem;
+  }
+
+  .paste-link-section label {
+    font-size: 1.2rem;
+  }
+
+  /* LOGIN AND SIGN UP PAGE STYLES */
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .input-group label {
+    font-size: 1.1rem;
+  }
+
+  .login-btn,
+  .signup-btn {
+    font-size: 1.1rem;
+  }
+}
