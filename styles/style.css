@@ -219,7 +219,7 @@ button.generate {
   justify-content: center;
   border-radius: 0.8rem;
   text-align: center;
-  padding: 0 0.4rem;
+  padding: 0 0.8rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -301,7 +301,6 @@ button.generate {
 
   .modal {
     width: 80%;
-    height: 60%;
   }
 
   .modal-header {
