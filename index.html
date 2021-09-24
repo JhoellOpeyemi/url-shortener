@@ -9,20 +9,22 @@
   </head>
   <body>
     <div class="container">
+      <!-- Header -->
       <header class="flex">
         <h1 class="logo">Unilorin Link</h1>
+        <!-- Nav links in header -->
         <nav>
           <a href="./login.html" class="login">Log In</a>
           <a href="./signup.html" class="sign-up">Sign Up</a>
         </nav>
       </header>
 
+      <!-- Main content of page -->
       <main class="flex landing-page">
         <div class="landing-page-text">
           <h1 class="landing-page-title">
             Generate a <span>custom link</span> with just one click
           </h1>
-          <a href="#" class="btn create-account">Create my account</a>
         </div>
         <div class="landing-page-image">
           <svg
@@ -43,17 +45,34 @@
         </div>
       </main>
 
+      <!-- Paste link section -->
       <section class="paste-link-section text-center">
         <label for="paste-link">Paste your link in the box below</label>
         <div class="paste-link-group">
           <input type="text" id="paste-link" class="paste-link-input" />
-          <button class="btn generate">Generate</button>
+          <button class="btn generate open-modal">Generate</button>
         </div>
       </section>
 
+      <!-- Pop up Modal -->
+      <div class="modal-bg flex">
+        <div class="modal">
+          <h2 class="modal-header">Your link has been shortened</h2>
+          <div class="modal-input-group paste-link-group">
+            <input type="text" class="modal-input paste-link-input" />
+            <button class="btn generate copy-link">Copy</button>
+          </div>
+
+          <div class="close-modal">X</div>
+        </div>
+      </div>
+
+      <!-- Footer -->
       <footer class="text-center landing-page-footer">
         &copy; Unilorin Link 2021
       </footer>
     </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

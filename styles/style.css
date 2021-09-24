@@ -66,6 +66,8 @@ label {
   text-align: center;
 }
 
+/* HOME PAGE */
+
 /* Body */
 body {
   font-family: "Montserrat", sans-serif;
@@ -89,7 +91,9 @@ header {
 nav a {
   font-size: 1.125rem;
   font-weight: 500;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
+  padding: 0 0 0.5rem 0;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:not(:last-child) {
@@ -97,6 +101,11 @@ nav a:not(:last-child) {
 }
 
 nav a:hover {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.sign-up {
   color: var(--text-color);
 }
 
@@ -116,13 +125,6 @@ main.landing-page {
 
 .landing-page-title span {
   color: var(--light-text-color);
-}
-
-a.create-account {
-  font-size: 1.3rem;
-  font-weight: 600;
-  padding: 1.1rem 1.2rem;
-  margin-top: 3.2rem;
 }
 
 .landing-page-image {
@@ -166,7 +168,15 @@ a.create-account {
   border: 1px solid var(--pry-color);
   border-radius: 0.8rem 0 0 0.8rem;
   letter-spacing: 2px;
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.09);
+  transition: all 0.4s ease;
+}
+
+.paste-link-input:hover,
+.paste-link-input:focus {
+  outline: none;
+  border-color: var(--pry-color);
+  background: #fff;
 }
 
 button.generate {
@@ -179,96 +189,64 @@ button.generate {
   border-radius: 0 0.8rem 0.8rem 0;
 }
 
+/* Pop up Modal styles */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.modal-bg.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  width: 70%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 0 0.4rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-input-group {
+  width: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .landing-page-footer {
   margin: 5rem 0 2rem 0;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* LOGIN AND SIGN UP PAGE STYLES */
-main.login-page,
-main.signup-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 3rem 0;
-}
-
-.heading {
-  font-size: 2.6rem;
-  font-weight: 700;
-}
-
-.input-section {
-  margin: 4rem 0 0 0;
-  width: 100%;
-  max-width: 35rem;
-}
-
-.input-group:not(:last-of-type) {
-  margin-bottom: 1.8rem;
-}
-
-.input-group label {
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.input-group input {
-  display: block;
-  width: 100%;
-  height: 3rem;
-  font-size: 1rem;
-  padding: 0 0.7rem;
-  border: 1px solid transparent;
-  border-radius: 0.8rem;
-  background: var(--very-light-text-color);
-  letter-spacing: 3px;
-  transition: all 0.4s ease;
-}
-
-.input-group input:hover,
-.input-group input:focus {
-  outline: none;
-  border-color: var(--pry-color);
-  background: #fff;
-}
-
-.input-sub-group:not(:last-child) {
-  margin-right: 0.5rem;
-}
-
-.login-btn,
-.signup-btn {
-  width: 100%;
-  height: 3rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  padding: 0 0.7rem;
-  margin: 1.8rem 0 0 0;
-}
-
-.no-account,
-.have-account {
-  margin-top: 3rem;
-}
-
-.no-account a,
-.have-account a {
-  color: var(--text-color);
-  font-weight: 600;
-}
-
-.home {
-  display: inline-block;
-  color: var(--text-color);
-  margin-top: 1rem;
-}
-
+/* Styles for screens less than 880px */
 @media screen and (max-width: 55rem) {
   /* Logo styles */
   .logo {
@@ -281,13 +259,13 @@ main.signup-page {
   }
 
   nav a:not(:last-child) {
-    margin-right: 0.6rem;
+    margin-right: 0.75rem;
   }
 
   /* Landing page styles  */
   main.landing-page {
     display: block;
-    margin-top: 5rem;
+    margin-top: 6.5rem;
   }
 
   .landing-page-text {
@@ -297,11 +275,6 @@ main.signup-page {
 
   .landing-page-title {
     font-size: 3.5rem;
-  }
-
-  a.create-account {
-    font-size: 1.1rem;
-    margin-top: 2.6rem;
   }
 
   .landing-page-image {
@@ -326,21 +299,18 @@ main.signup-page {
     font-size: 1.2rem;
   }
 
-  /* LOGIN AND SIGN UP PAGE STYLES */
-  .heading {
-    font-size: 2.2rem;
+  .modal {
+    width: 80%;
+    height: 60%;
   }
 
-  .input-group label {
+  .modal-header {
     font-size: 1.1rem;
-  }
-
-  .login-btn,
-  .signup-btn {
-    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 }
 
+/* Styles for screens less than 380px */
 @media screen and (max-width: 23.75rem) {
   .container {
     width: 94%;
@@ -361,7 +331,7 @@ main.signup-page {
 
   /* Landing page styles  */
   main.landing-page {
-    margin-top: 4rem;
+    margin-top: 5.5rem;
   }
 
   .landing-page-title {

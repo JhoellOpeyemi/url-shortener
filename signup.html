@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/login-signup.css" />
     <title>URL SHortener | Sign Up</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
       <main class="signup-page">
         <h1 class="signup-text heading">Sign Up</h1>
 
-        <div class="input-section">
+        <form id="signup-form" class="form-section">
           <div class="input-group flex">
             <div class="input-sub-group">
               <label for="first-name">First Name</label>
@@ -60,13 +61,22 @@
             />
           </div>
 
-          <button class="btn signup-btn">Create My Account</button>
-        </div>
+          <button
+            type="submit"
+            form="signup-form"
+            value="Submit"
+            class="btn signup-btn"
+          >
+            Create My Account
+          </button>
+        </form>
 
         <p class="have-account">
           Already have an account? <a href="./login.html">Log In</a>
         </p>
       </main>
     </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

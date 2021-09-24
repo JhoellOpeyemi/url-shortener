@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/login-signup.css" />
     <title>URL Shortener | Login</title>
   </head>
   <body>
@@ -13,7 +14,7 @@
       <main class="login-page">
         <h1 class="login-text heading">Log In</h1>
 
-        <div class="input-section">
+        <form id="login-form" class="form-section">
           <div class="input-group">
             <label for="username">Username</label>
             <input
@@ -34,12 +35,21 @@
             />
           </div>
 
-          <button class="btn login-btn">Login</button>
-        </div>
+          <button
+            type="submit"
+            form="login-form"
+            value="Submit"
+            class="btn login-btn"
+          >
+            Login
+          </button>
+        </form>
         <p class="no-account">
           Don't have an account? <a href="./signup.html">Sign Up</a>
         </p>
       </main>
     </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
