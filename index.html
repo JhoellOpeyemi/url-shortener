@@ -48,10 +48,17 @@
       <!-- Paste link section -->
       <section class="paste-link-section text-center">
         <label for="paste-link">Paste your link in the box below</label>
-        <div class="paste-link-group">
-          <input type="text" id="paste-link" class="paste-link-input" />
-          <button class="btn generate open-modal">Generate</button>
-        </div>
+        <form id="paste-link" class="paste-link-group">
+          <input
+            type="text"
+            id="paste-link"
+            class="paste-link-input"
+            required
+          />
+          <button form="paste-link" class="btn generate open-modal">
+            Generate
+          </button>
+        </form>
       </section>
 
       <!-- Pop up Modal -->
@@ -59,7 +66,7 @@
         <div class="modal">
           <h2 class="modal-header">Your link has been shortened!</h2>
           <div class="modal-input-group paste-link-group">
-            <input type="text" class="modal-input paste-link-input" />
+            <input type="text" class="modal-input" />
             <button class="btn generate copy-link">Copy</button>
           </div>
 

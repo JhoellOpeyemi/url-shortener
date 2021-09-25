@@ -157,7 +157,8 @@ main.landing-page {
   height: 2.5rem;
 }
 
-.paste-link-input {
+.paste-link-input,
+.modal-input {
   position: absolute;
   top: 0;
   left: 0;
@@ -167,13 +168,15 @@ main.landing-page {
   padding: 0 0.8rem;
   border: 1px solid var(--pry-color);
   border-radius: 0.8rem 0 0 0.8rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.09375rem;
   background: rgba(0, 0, 0, 0.09);
   transition: all 0.4s ease;
 }
 
 .paste-link-input:hover,
-.paste-link-input:focus {
+.paste-link-input:focus,
+.modal-input:hover,
+.modal-input:focus {
   outline: none;
   border-color: var(--pry-color);
   background: #fff;
@@ -242,7 +245,7 @@ button.generate {
 }
 
 .landing-page-footer {
-  margin: 5rem 0 2rem 0;
+  margin: 4.5rem 0 1.2rem 0;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -350,7 +353,8 @@ button.generate {
     font-size: 1.06rem;
   }
 
-  .paste-link-input {
+  .paste-link-input,
+  .modal-input {
     position: relative;
     width: 90%;
     font-size: 1rem;
@@ -366,6 +370,6 @@ button.generate {
   }
 
   .landing-page-footer {
-    margin: 7rem 0 1rem 0;
+    margin: 6rem 0 1rem 0;
   }
 }
