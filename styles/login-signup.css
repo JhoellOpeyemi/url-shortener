@@ -18,8 +18,7 @@ main.signup-page {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 3rem 0;
+  padding: 4.6rem 0 2rem 0;
 }
 
 .heading {
