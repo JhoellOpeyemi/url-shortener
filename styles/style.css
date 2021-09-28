@@ -71,7 +71,6 @@ label {
 /* Body */
 body {
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
   font-size: var(--font-size);
 }
 
